@@ -15,10 +15,13 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
+            Color.gray
+                .frame(width: 20, height: 30)
+            
             Image("back")
             .resizable()
             .scaledToFill()
-            .frame(width: 300, height: 900)
+            .frame(width: 300, height: 755)
         
         Image(systemName: "battery.75")
                 .offset(x: 150, y: -400)
@@ -34,7 +37,7 @@ struct ContentView: View {
                             
             Text("حاسبة الدرجات")
                 .font(.largeTitle)
-                .offset(x: 0, y: -130)
+                .offset(x: 0, y: -99)
                         
             Image("calc")
                 .resizable()
@@ -80,18 +83,58 @@ struct ContentView: View {
                 .font(.title3)
             
             Text(gradeDes)
-                .offset(x: 0, y: 100)
+                .offset(x: 0, y: 70)
                 .font(.largeTitle)
                 
                Image(pic1)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 150, height: 150)
-                .offset(x: 0, y: 150)
-            }
-            
-        }
+                .offset(x: 0, y: 65)
+                
         
+                
+               
+            }
+            VStack{
+                
+            
+                
+                Image(systemName: "chevron.backward")
+                    .offset(x: -160, y: 481.3)
+            
+                Image(systemName: "chevron.forward")
+                    .offset(x: -56, y: 465)
+                
+                Image(systemName: "square.and.arrow.up")
+                    .offset(x: 5, y: 447)
+                
+                Image(systemName: "book")
+                    .offset(x: 80, y: 428)
+                
+                Image(systemName: "square.on.square")
+                    .offset(x: 150, y: 410)
+                
+                Text("GradeCalculator.com")
+                    .font(.title3)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 390, height: 40)
+                    .background(.gray)
+                    .opacity(0.6)
+                    .textFieldStyle(.roundedBorder)
+                    .offset(x: 0, y: 337)
+                
+                Image(systemName: "lock.fill")
+                    .offset(x: -104, y: 305)
+                
+                Image(systemName: "arrow.clockwise")
+                    .offset(x: 170, y: 289)
+                
+                Image(systemName: "textformat.size")
+                    .offset(x: -174, y: 270)
+
+            }
+        }
     }
 
 struct ContentView_Previews: PreviewProvider {
